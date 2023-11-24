@@ -107,7 +107,13 @@
 }
 
 .content .container-form .text-content {
-  width: 80%;
+  width: 90%;
+}
+
+@media (max-width: 1090px) {
+  .content .container-form .text-content {
+    width: 80%;
+  }
 }
   
 .content .container-form .text-content textarea {
@@ -169,6 +175,10 @@
   font-weight: 600;
   margin: 20px;
   bottom: 0px;
+}
+
+.content p span {
+  color: #ff7d6a;
 }
 
 @media (max-width: 485px) {

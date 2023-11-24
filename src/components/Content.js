@@ -30,14 +30,14 @@ function Content() {
             );
 
             if (!response.ok) {
-                throw new Error("Retry!");
+                throw new Error("Something went wrong, Retry!");
             }
 
             const result = await response.arrayBuffer();
             const base64String = btoa(new Uint8Array(result).reduce((data, byte) => data + String.fromCharCode(byte), ""));
             return `data:image/png;base64,${base64String}`;
         } catch (error) {
-            setError(error.message);
+            setError(error);
             return null;
         }
     }
@@ -73,7 +73,7 @@ function Content() {
                 if (index !== 0) {
                     pdf.addPage();
                 }
-                pdf.addImage(data, "PNG", 10, 10, 190, 277);
+                pdf.addImage(data, "PNG", 0, 0, 210, 297);
             });
             pdf.save("comic_strip.pdf");
         }
@@ -87,7 +87,7 @@ function Content() {
             {!loaded ? (
                 <Loader />
             ) : error ? (
-                <p>Error: {error}</p>
+                <p>Something went <span>wrong,</span> Try again!</p>
             ) : (
                 <></>
             )}
@@ -102,7 +102,7 @@ function Content() {
                     <ImagePanel key={index} src={data} alt={`Image ${index}`} desc={queries[index]['inputs']} />
                 ))}
             </div>
-            <p>NOTE: You need to describe exactly 10 comma-separated storylines to generate a 10-panel comic strip.</p>
+            <p><span>NOTE:</span> You need to describe exactly 10 comma-separated storylines to generate a 10-panel comic strip.</p>
             <Footer />
         </div>
     );

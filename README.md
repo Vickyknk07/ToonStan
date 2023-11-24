@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# ToonStan - Comic Creator Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Create, download, and share your own 10-panel comic strips with ease using this React.js-based web application!
 
-## Available Scripts
+### Getting Started
 
-In the project directory, you can run:
+Clone the Repository:
 
-### `npm start`
+```
+https://github.com/Vickyknk07/ToonStan.git
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Navigate to the Project Directory:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+cd ToonStan
+```
 
-### `npm test`
+Install Dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm install
+```
 
-### `npm run build`
+Start the Development Server:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Deployment Site
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Check out the deployed site at [vicky.iitbhu.tech](https://vicky.iitbhu.tech)
 
-### `npm run eject`
+### Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **User-Friendly UI**: Intuitive and easy-to-use interface built with React.js.
+- **Comic Strip Generation**: Input comma-separated text to generate a 10-panel comic strip.
+- **Responsive Design**: Ensures a seamless experience on both desktop and mobile browsers.
+- **Text Annotations**: Text annotations on the comic strip panels for a personalized touch.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Screenshots
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<img src="./public/Screenshot1.png"/>
+<img src="./public/Screenshot2.png"/>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Demo Input Text
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A man wearing sunglasses sitting on a park, The man is reading a newspaper, Suddenly the wind blows the newspaper away, The man looks surprised as the newspaper flies through the air, A dog catches the newspaper mid-air, The man looks impressed while the dog does a superhero pose, The dog hands the newspaper back to the man, The man offers a pack of biscuits to the dog as a thank-you gesture, The dog happily accepts the biscuits, Both of them are seen sharing a friendly moment on the park enjoying the day
