@@ -1,38 +1,216 @@
 .App {
-  text-align: center;
+  display: block;
+  scrollbar-width: 0px; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg {    
+  background: linear-gradient(45deg, #1A2980, #11101D);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -10;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content {
+  width: 100%;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  z-index: 1;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.content::-webkit-scrollbar { 
+  display: none; 
+}
+.bg::-webkit-scrollbar { 
+  display: none; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.content .header {
+  background: url('../public/header.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -5;
+  max-width: 100%;
+}
+
+.content .header #headtxt {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 40px;
+  background-color: black;
+  color: white;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+@media (max-width: 700px) {
+  .content .header #headtxt {
+    font-size: 35px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 600px) {
+  .content .header {
+    height: 15vh;
+    width: 100vw;
   }
+  .content .header #headtxt {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .content .header #headtxt {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .content .header {
+    height: 20vh;
+    width: 100vw;
+  }
+}
+
+@media (min-width: 901px) {
+  .content .header {
+    height: 25vh;
+    width: 100vw;
+  }
+}
+
+.content .container-form {
+  position: relative;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border: 2px solid #3d3d41;
+  border-radius: 20px;
+  outline: none;
+  background-color: #2c2d31;
+  margin: 30px;
+}
+
+.content .container-form .text-content {
+  width: 80%;
+}
+  
+.content .container-form .text-content textarea {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  background-color: #2c2d31;
+  color: #FFFFFF;
+  resize: none;
+  padding: 12px 20px;
+}
+
+.content .container-form textarea::-webkit-scrollbar { 
+  display: none; 
+} 
+
+.content .container-form .btn {
+  position: absolute;
+  border-radius: 10px;
+  background: linear-gradient(158deg, #DEF9FA -43.27%, #BEF3F5 -21.24%, #9DEDF0 12.19%, #7DE7EB 29.82%, #5CE1E6 51.94%, #33BBCF 90.29%);
+  font-weight: 600;
+  font-size: small;
+  color: #00040E;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  right: 0px;
+  bottom: 0px;
+}
+
+@media (max-width: 650px) {
+  .content .container-form {
+    width: 80%;
+  }
+
+  .content .container-form .text-content {
+    width: 70%;
+  }
+
+  .content .container-form .btn {
+    padding: 7px;
+  }
+}
+
+.content .comic-strip {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+}
+
+.content p {
+  position: relative;
+  font-weight: 600;
+  margin: 20px;
+  bottom: 0px;
+}
+
+@media (max-width: 485px) {
+  .content p {
+    font-size: 14px;
+  }
+}
+
+.image-panel{
+  margin-bottom: 50px;
+}
+
+.content .comic-strip .image-panel .responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.content .comic-strip button {
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(158deg, #DEF9FA -43.27%, #BEF3F5 -21.24%, #9DEDF0 12.19%, #7DE7EB 29.82%, #5CE1E6 51.94%, #33BBCF 90.29%);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: small;
+  color: #00040E;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.content .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #121212;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.content .footer span a {
+  color: #ff7d6a;
+  cursor: pointer;
+  text-decoration: none;
 }
